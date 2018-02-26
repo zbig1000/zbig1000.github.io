@@ -63,16 +63,16 @@ $(document).ready(function() {
     });
   }
 
-  function handleTaskDeleteRequest() {
-    var parentEl = $(this).parent().parent();
-    var taskId = parentEl.attr('data-task-id');
-    var requestUrl = apiRoot + 'deleteTask/' + taskId ;
-
-
 //    $.ajax({
 //      url: requestUrl + '/?' + $.param({
 //        taskId: taskId
 //      }),
+
+
+  function handleTaskDeleteRequest() {
+    var parentEl = $(this).parent().parent();
+    var taskId = parentEl.attr('data-task-id');
+    var requestUrl = apiRoot + 'deleteTask/' + taskId ;
 
     $.ajax({  
 	url: requestUrl,
