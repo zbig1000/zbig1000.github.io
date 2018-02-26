@@ -74,12 +74,12 @@ $(document).ready(function() {
 //        taskId: taskId
 //      }),
 
-    $.ajax({  url: requestUrl  }),
-
-      method: 'DELETE',
-      success: function() {
-        parentEl.slideUp(400, function() { parentEl.remove(); });
-      }
+    $.ajax({  
+	url: requestUrl,
+	method: 'DELETE',
+      	success: function() {
+        	parentEl.slideUp(400, function() { parentEl.remove(); });
+      		}
     })
   }
 
