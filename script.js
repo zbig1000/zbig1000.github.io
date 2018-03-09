@@ -110,12 +110,12 @@ $(document).ready(function() {
     var taskId = parentEl.attr('data-task-id');
     var requestUrl = apiRoot + 'deleteTask/' + taskId;
 
-    $.ajax({  
-	url: requestUrl,
-	method: 'DELETE',
-      	success: function() {
-        	parentEl.slideUp(400, function() { parentEl.remove(); });
-      		}
+    $.ajax({
+      url: requestUrl,
+      method: 'DELETE',
+      success: function() {
+        parentEl.slideUp(400, function() { parentEl.remove(); });
+      }
     })
   }
 
