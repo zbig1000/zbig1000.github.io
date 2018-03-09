@@ -104,7 +104,6 @@ $(document).ready(function() {
       }
     });
   }
-//    var requestUrl = apiRoot + 'deleteTask/' + taskId;
 
   function handleTaskDeleteRequest() {
     var parentEl = $(this).parents('[data-task-id]');
@@ -138,7 +137,7 @@ $(document).ready(function() {
         title: taskTitle,
         content: taskContent
       }),
-      success: getAllTasks
+      success: function() { getAllTasks(); 	}
     });
   }
 
