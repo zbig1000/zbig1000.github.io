@@ -105,10 +105,11 @@ $(document).ready(function() {
     });
   }
 //    var requestUrl = apiRoot + 'deleteTask/' + taskId;
+
   function handleTaskDeleteRequest() {
     var parentEl = $(this).parents('[data-task-id]');
     var taskId = parentEl.attr('data-task-id');
-    var requestUrl = apiRoot + 'deleteTask/' + '15';
+    var requestUrl = apiRoot + 'deleteTask/15';
 
     $.ajax({
       url: requestUrl,
