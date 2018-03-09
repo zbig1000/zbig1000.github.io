@@ -130,14 +130,14 @@ $(document).ready(function() {
     $.ajax({
       url: requestUrl,
       method: 'POST',
-      processData: false,
+      processData: true,
       contentType: "application/json; charset=utf-8",
       dataType: 'json',
       data: JSON.stringify({
         title: taskTitle,
         content: taskContent
       }),
-      success: function() { getAllTasks	}
+      success: getAllTasks
     });
   }
 
