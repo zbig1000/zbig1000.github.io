@@ -107,16 +107,16 @@ $(document).ready(function() {
 //    var requestUrl = apiRoot + 'deleteTask/' + taskId;
 
   function handleTaskDeleteRequest() {
-    var parentEl = $(this).parents('[data-task-id]');
+    var parentEl = $(this).parent().parent();
     var taskId = parentEl.attr('data-task-id');
-    var requestUrl = apiRoot + 'deleteTask/15';
+    var requestUrl = apiRoot + 'deleteTask/' + taskId ;
 
-    $.ajax({
-      url: requestUrl,
-      method: 'DELETE',
-      success: function() {
-        parentEl.slideUp(400, function() { parentEl.remove(); });
-      }
+    $.ajax({  
+	url: requestUrl,
+	method: 'DELETE',
+      	success: function() {
+        	parentEl.slideUp(400, function() { parentEl.remove(); });
+      		}
     })
   }
 
