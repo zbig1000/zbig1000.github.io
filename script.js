@@ -118,7 +118,7 @@ $(document).ready(function() {
       		}
     })
   }
-//processData: false,
+
   function handleTaskSubmitRequest(event) {
     event.preventDefault();
 
@@ -130,6 +130,7 @@ $(document).ready(function() {
     $.ajax({
       url: requestUrl,
       method: 'POST',
+      processData: false,
       contentType: "application/json; charset=utf-8",
       dataType: 'json',
       data: JSON.stringify({
