@@ -56,7 +56,7 @@ $(document).ready(function() {
 
       $datatableRowEl.find('[data-board-name-select]').append($availableBoardsOptionElements);
 
-      $datatableRowEl.appendTo($tasksContainer);
+      $datatableRowEl.appendTo(tasksContainer);
     });
   }
 
