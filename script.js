@@ -58,7 +58,7 @@ $(document).ready(function() {
         .append($availableBoardsOptionElements);
 
       $datatableRowEl
-        .appendTo($tasksContainer);
+        .appendTo(tasksContainer);
     });
   }
 
