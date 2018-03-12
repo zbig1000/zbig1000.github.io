@@ -45,7 +45,7 @@ $(document).ready(function() {
   }
 
   function handleDatatableRender(taskData, boards) {
-    tasksContainer.empty();
+    $tasksContainer.empty();
     boards.forEach(board => {
       availableBoards[board.id] = board;
     });
@@ -56,7 +56,7 @@ $(document).ready(function() {
 
       $datatableRowEl.find('[data-board-name-select]').append($availableBoardsOptionElements);
 
-      $datatableRowEl.appendTo(tasksContainer);
+      $datatableRowEl.appendTo($tasksContainer);
     });
   }
 
@@ -135,7 +135,7 @@ $(document).ready(function() {
         title: taskTitle,
         content: taskContent
       }),
-        complete: function(data) {
+        success: function(data) {
         if(data.status === 200) {
           getAllTasks();
         }
