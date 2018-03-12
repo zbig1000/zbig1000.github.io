@@ -45,7 +45,7 @@ $(document).ready(function() {
   }
 
   function handleDatatableRender(taskData, boards) {
-    tasksContainer.empty();
+    $tasksContainer.empty();
     boards.forEach(board => {
       availableBoards[board.id] = board;
     });
@@ -57,8 +57,7 @@ $(document).ready(function() {
       $datatableRowEl.find('[data-board-name-select]')
         .append($availableBoardsOptionElements);
 
-      $datatableRowEl
-        .appendTo($tasksContainer);
+      $datatableRowEl.appendTo($tasksContainer);
     });
   }
 
