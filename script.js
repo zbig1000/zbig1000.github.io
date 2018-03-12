@@ -54,8 +54,7 @@ $(document).ready(function() {
       var $datatableRowEl = createElement(task);
       var $availableBoardsOptionElements = prepareBoardOrListSelectOptions(boards);
 
-      $datatableRowEl.find('[data-board-name-select]')
-        .append($availableBoardsOptionElements);
+      $datatableRowEl.find('[data-board-name-select]').append($availableBoardsOptionElements);
 
       $datatableRowEl.appendTo($tasksContainer);
     });
